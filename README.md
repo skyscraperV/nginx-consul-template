@@ -1,5 +1,7 @@
 ========= Usage =========
 
+docker pull skyscrapercl/tailored-nginx-consul-template
+
 use env :
 	TAILORED_MONITOR_CONSUL_SERVICE_NAME 
 	TAILORED_NGINX_LISTEN_PORT
