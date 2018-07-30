@@ -1,3 +1,14 @@
+========= Usage =========
+
+use env :
+	TAILORED_MONITOR_CONSUL_SERVICE_NAME 
+	TAILORED_NGINX_LISTEN_PORT
+
+
+
+========================
+
+
 nginx-consul-template
 ===
 Docker images to have nginx and the consul template installed

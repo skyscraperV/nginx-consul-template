@@ -1,11 +1,11 @@
 upstream app {
   least_conn;
-  {{range service "default_service"}}server {{.Address}}:{{.Port}} max_fails=5 fail_timeout=60 weight=1;
+  {{range service "TAILORED_MONITOR_CONSUL_SERVICE_NAME_PLACEHOLDER"}}server {{.Address}}:{{.Port}} max_fails=5 fail_timeout=60 weight=1;
   {{else}}server 127.0.0.1:65535; # force a 502{{end}}
 }
 
 server {
-  listen 80  default_server;
+  listen TAILORED_NGINX_LISTEN_PORT_PLACEHOLDER  default_server;
 
   location / {
     proxy_pass http://app;
